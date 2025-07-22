@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Pairing Tool | ELITECHWIZ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: linear-gradient(135deg, #00d4ff, #7e00ff);
+      --bg: #000000;
+      --glass: rgba(255, 255, 255, 0.05);
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --highlight: #00ffff;
+      --danger: #ff5555;
+      --radius: 16px;
+      --blur: 12px;
+      --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --glow: 0 0 15px #00d4ff, 0 0 30px #7e00ff;
+      --glow-anim: 0 0 30px #00d4ff, 0 0 60px #7e00ff;
+    }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .header {
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--glow);
+      border: 2px solid transparent;
+      animation: glow-header 2s infinite alternate;
+    }
+    @keyframes glow-header {
+      from { box-shadow: var(--glow); border-color: #00d4ff; }
+      to { box-shadow: var(--glow-anim); border-color: #7e00ff; }
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(0, 212, 255, 0.3);
+      box-shadow: var(--glow);
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .main-content {
+      width: 100%;
+      max-width: 500px;
+      margin: 4rem auto 0 auto;
+      background: rgba(0,0,0,0.7);
+      border-radius: var(--radius);
+      box-shadow: var(--glow);
+      border: 2px solid #ff5555;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+    .danger-title {
+      color: var(--danger);
+      font-size: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #ff5555, 0 0 2px #fff;
+    }
+    .danger-desc {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .input-container {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+    .input-container input {
+      flex: 1;
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--text);
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .input-container input:focus {
+      outline: none;
+      border-color: var(--danger);
+      box-shadow: 0 0 0 2px rgba(255, 85, 85, 0.2);
+    }
+    .input-container button {
+      padding: 1rem 1.5rem;
+      background: var(--danger);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 0 10px #ff5555, 0 0 20px #7e00ff;
+      letter-spacing: 1px;
+    }
+    .input-container button:hover {
+      background: #ff2222;
+      box-shadow: 0 0 20px #ff5555, 0 0 40px #7e00ff;
+      transform: scale(1.08);
+    }
+    #spam-result {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--danger);
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .footer-badge {
+      width: 100vw;
+      text-align: center;
+      padding: 1rem 0 0.5rem 0;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 2rem;
+      z-index: 100;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -2;
+      background: linear-gradient(120deg, #0f2027, #2c5364, #00d4ff, #7e00ff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      background: url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+      opacity: 0.35;
+      filter: blur(1px) grayscale(0.1);
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="https://files.catbox.moe/89bw33.jpg" alt="EliTechWiz Logo" class="logo-img">
+      <div class="logo-text">ELITECHWIZ</div>
+    </div>
+  </header>
+  <div class="main-content">
+    <div class="danger-title" style="color:#f0ad4e;"><i class="fas fa-tasks"></i> Bulk Pairing Tool</div>
+    <div class="danger-desc">A developer tool for sending multiple pairing requests to a single number for testing purposes. Please use responsibly.</div>
+    <div class="input-container">
+      <input type="number" id="number" placeholder="Target WhatsApp Number (with country code)" required>
+      <input type="number" id="count" placeholder="Number of Requests (e.g., 15)" value="15" style="flex: 0.5;">
+      <button id="spam-btn">START</button>
+    </div>
+    <div id="spam-result"></div>
+  </div>
+  <div class="footer-badge">© ELITECHWIZ TEAM &mdash; <a href="https://github.com/Eliahhango/Api" style="color:var(--highlight);text-decoration:none;">GitHub</a> | <a href="https://whatsapp.com/channel/0029VaeEYF0BvvsZpaTPfL2s" style="color:var(--highlight);text-decoration:none;">WA Channel</a></div>
+  <script>
+    const spamBtn = document.getElementById('spam-btn');
+    const numberInput = document.getElementById('number');
+    const countInput = document.getElementById('count');
+    const spamResult = document.getElementById('spam-result');
+    spamBtn.addEventListener('click', async () => {
+      const number = numberInput.value.replace(/[^0-9]/g, "");
+      const count = countInput.value || 15; // Use default if empty
+      if (!number || number.length < 11) {
+        spamResult.textContent = 'Enter a valid WhatsApp number with country code!';
+        return;
+      }
+      spamResult.textContent = `Sending ${count} pairing requests...`;
+      try {
+        const res = await fetch(`/api/spam-pair?number=${number}&count=${count}`);
+        const data = await res.json();
+        spamResult.textContent = data.message || 'Done.';
+      } catch (e) {
+        spamResult.textContent = 'Error sending requests.';
+      }
+    });
+  </script>
+</body>
+</html> 

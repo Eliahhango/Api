@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITECHWIZ QR CODE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: linear-gradient(135deg, #00d4ff, #7e00ff);
+      --bg: #000000;
+      --glass: rgba(255, 255, 255, 0.05);
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --highlight: #00ffff;
+      --radius: 16px;
+      --blur: 12px;
+      --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --glow: 0 0 15px #00d4ff, 0 0 30px #7e00ff;
+      --glow-anim: 0 0 30px #00d4ff, 0 0 60px #7e00ff;
+    }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .header {
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--glow);
+      border: 2px solid transparent;
+      animation: glow-header 2s infinite alternate;
+    }
+    @keyframes glow-header {
+      from { box-shadow: var(--glow); border-color: #00d4ff; }
+      to { box-shadow: var(--glow-anim); border-color: #7e00ff; }
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(0, 212, 255, 0.3);
+      box-shadow: var(--glow);
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .qr-container {
+      margin: 4rem 0 2rem 0;
+      background: var(--glass);
+      border-radius: var(--radius);
+      box-shadow: var(--glow);
+      border: 2px solid transparent;
+      animation: glow-box 2s infinite alternate;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      min-height: 320px;
+    }
+    @keyframes glow-box {
+      from { box-shadow: var(--glow); border-color: #00d4ff; }
+      to { box-shadow: var(--glow-anim); border-color: #7e00ff; }
+    }
+    .qr-title {
+      font-size: 1.4rem;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1.5rem;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+      font-weight: 600;
+    }
+    #qr-img {
+      width: 260px;
+      height: 260px;
+      background: rgba(0,0,0,0.2);
+      border-radius: var(--radius);
+      box-shadow: 0 0 30px #00d4ff, 0 0 60px #7e00ff;
+      border: 2px solid #00d4ff;
+      display: block;
+      margin: 0 auto;
+    }
+    .footer-badge {
+      width: 100vw;
+      text-align: center;
+      padding: 1rem 0 0.5rem 0;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 2rem;
+      z-index: 100;
+      position: relative;
+    }
+    .music-player {
+      margin-top: 2rem;
+      background: var(--glass);
+      border-radius: var(--radius);
+      box-shadow: var(--glow);
+      border: 2px solid transparent;
+      padding: 1.5rem;
+      text-align: center;
+      animation: glow-box 2s infinite alternate;
+    }
+    .music-player h3 {
+      font-size: 1.2rem;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 0.5rem;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+    .music-title {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .play-btn {
+      background: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--glow);
+      transition: transform 0.2s ease;
+    }
+    .play-btn:hover {
+      transform: scale(1.1);
+    }
+    .play-btn i {
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+    .time-display {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px) {
+      .header { padding: 1rem 1rem; }
+      .qr-container { padding: 1.2rem 0.5rem; min-width: 200px; }
+      #qr-img { width: 180px; height: 180px; }
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -2;
+      background: linear-gradient(120deg, #0f2027, #2c5364, #00d4ff, #7e00ff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      background: url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+      opacity: 0.35;
+      filter: blur(1px) grayscale(0.1);
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .overlayed-box, .music-player {
+      background: rgba(0,0,0,0.65); /* stronger dark overlay for readability */
+      color: #fff;
+      transition: color 0.3s, background 0.3s;
+    }
+    .overlayed-box .qr-title, .music-player h3, .music-player .music-title {
+      color: #fff;
+      text-shadow: 0 2px 8px #000, 0 0 2px #00d4ff;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="https://files.catbox.moe/89bw33.jpg" alt="EliTechWiz Logo" class="logo-img">
+      <div class="logo-text">ELITECHWIZ</div>
+    </div>
+  </header>
+  <div class="qr-container overlayed-box">
+    <div class="qr-title">Scan this QR Code to Connect Your WhatsApp</div>
+    <img id="qr-img" src="" alt="QR Code" />
+    <div id="qr-status" style="margin-top:1.5rem;color:var(--muted);font-size:1rem;"></div>
+  </div>
+  <div class="music-player overlayed-box">
+    <h3>ELITECHWIZ RADIO</h3>
+    <div class="music-title">Inspiration for Hackers</div>
+    <button class="play-btn" onclick="togglePlay()">
+      <i class="fas fa-pause" id="play-icon"></i>
+    </button>
+    <div class="time-display" id="time1">0:00</div>
+    <audio id="audio1" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b6b3b6e2.mp3" loop></audio>
+  </div>
+  <div class="footer-badge">© ELITECHWIZ TEAM &mdash; <a href="https://github.com/Eliahhango/Api" style="color:var(--highlight);text-decoration:none;">GitHub</a> | <a href="https://whatsapp.com/channel/0029VaeEYF0BvvsZpaTPfL2s" style="color:var(--highlight);text-decoration:none;">WA Channel</a></div>
+  <script>
+    // Fetch QR code image
+    async function fetchQR() {
+      const qrImg = document.getElementById('qr-img');
+      const qrStatus = document.getElementById('qr-status');
+      qrStatus.textContent = 'Loading QR code...';
+      try {
+        const res = await fetch('/eliahqr/qr');
+        if (!res.ok) throw new Error('Failed to load QR');
+        const blob = await res.blob();
+        qrImg.src = URL.createObjectURL(blob);
+        qrStatus.textContent = 'Scan with WhatsApp to pair.';
+      } catch (e) {
+        qrStatus.textContent = 'Failed to load QR code.';
+      }
+    }
+    window.onload = fetchQR;
+
+    // Music player controls
+    const audio = document.getElementById('audio1');
+    const playBtn = document.querySelector('.play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const timeDisplay = document.getElementById('time1');
+    document.addEventListener('click', function initAudio() {
+      audio.play().then(() => {
+        playIcon.classList.replace('fa-play', 'fa-pause');
+        updateTimeDisplay();
+      }).catch(error => {
+        console.log('Auto-play prevented:', error);
+      });
+      document.removeEventListener('click', initAudio);
+    }, { once: true });
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        playIcon.classList.replace('fa-play', 'fa-pause');
+      } else {
+        audio.pause();
+        playIcon.classList.replace('fa-pause', 'fa-play');
+      }
+    }
+    function updateTimeDisplay() {
+      const minutes = Math.floor(audio.currentTime / 60);
+      const seconds = Math.floor(audio.currentTime % 60);
+      timeDisplay.textContent = `${minutes}:${String(seconds).padStart(2, '0')}`;
+      if (!audio.paused) {
+        requestAnimationFrame(updateTimeDisplay);
+      }
+    }
+    audio.addEventListener('timeupdate', updateTimeDisplay);
+
+    // Dynamic text color for overlayed elements (future-proof for more complex backgrounds)
+    function setOverlayTextContrast() {
+      const overlays = document.querySelectorAll('.overlayed-box');
+      overlays.forEach(box => {
+        // Sample the background color (simulate with a fixed dark for now)
+        // In a real app, you could use canvas or CSS mix-blend-mode for more advanced detection
+        box.style.color = '#fff';
+      });
+    }
+    setOverlayTextContrast();
+    // If you ever change overlay backgrounds dynamically, call setOverlayTextContrast again
+  </script>
+</body>
+</html> 

@@ -1,0 +1,513 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern Dashboard" />
+  <title>ELITECHWIZ SESSION</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: linear-gradient(135deg, #00d4ff, #7e00ff);
+      --bg: #000000;
+      --glass: rgba(255, 255, 255, 0.05);
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --highlight: #00ffff;
+      --radius: 16px;
+      --blur: 12px;
+      --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --glow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    .status {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .status-item {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .status-item:hover {
+      background: rgba(0, 212, 255, 0.1);
+      border-color: var(--highlight);
+    }
+
+    .status-item i {
+      color: var(--highlight);
+    }
+
+    main {
+      flex: 1;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .tool {
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+      transition: var(--transition);
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .tool:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), var(--glow);
+      border-color: rgba(0, 212, 255, 0.2);
+    }
+
+    .tool:hover::before {
+      opacity: 1;
+    }
+
+    .tool i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: var(--transition);
+    }
+
+    .tool h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      text-align: center;
+      max-width: 800px;
+      padding: 1rem;
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .note a {
+      color: var(--highlight);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .note a:hover {
+      text-shadow: 0 0 10px var(--highlight);
+    }
+
+    .music-player {
+      width: 100%;
+      max-width: 1000px;
+      background: var(--glass);
+      border-radius: var(--radius);
+      padding: 2rem;
+      backdrop-filter: blur(var(--blur));
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .music-player h2 {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: var(--transition);
+    }
+
+    .track:hover {
+      background: rgba(0, 0, 0, 0.4);
+      border-color: rgba(0, 212, 255, 0.2);
+    }
+
+    .progress {
+      width: 300px;
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      width: 0%;
+      background: linear-gradient(90deg, #00d4ff, #7e00ff);
+      height: 100%;
+      transition: width 0.1s linear;
+      position: relative;
+    }
+
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -2px;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      transform: translateX(50%);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .track:hover .progress-fill::after {
+      opacity: 1;
+    }
+
+    button {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--highlight);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    button:hover {
+      background: rgba(0, 212, 255, 0.1);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--muted);
+      min-width: 50px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      main {
+        padding: 1.5rem;
+      }
+      
+      .tools {
+        grid-template-columns: 1fr;
+      }
+      
+      .track {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      
+      .progress {
+        width: 100%;
+      }
+      
+      .controls {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ELITECHWIZ</div>
+    <div class="status">
+      <div class="status-item"><i class="fas fa-bolt"></i> <span id="battery">--%</span></div>
+      <div class="status-item"><i class="fas fa-wifi"></i> <span id="ip">Loading...</span></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="tools">
+      <div class="tool" onclick="window.open(`/eliahpcode`)">
+        <i class="fas fa-link"></i>
+        <h3>PAIR CODE</h3>
+        <p class="muted">Connect to WhatsApp</p>
+      </div>
+      <div class="tool" onclick="window.open(`/eliahqr`)">
+        <i class="fas fa-qrcode"></i>
+        <h3>QR CODE</h3>
+        <p class="muted">Alternative connection</p>
+      </div>
+      <div class="tool" onclick="window.open(`https://github.com/Eliahhango/Api`)">
+        <i class="fab fa-github"></i>
+        <h3>ELITECHWIZ</h3>
+        <p class="muted">GitHub Repository</p>
+      </div>
+      <div class="tool" onclick="window.open(`https://wa.me/255688164510?text=hellow sir`)">
+        <i class="fas fa-headset"></i>
+        <h3>CONTACT DEV</h3>
+        <p class="muted">Developer Support</p>
+      </div>
+      <div class="tool" onclick="window.open(`https://whatsapp.com/channel/0029VaeEYF0BvvsZpaTPfL2s`)">
+        <i class="fas fa-broadcast-tower"></i>
+        <h3>WA CHANNEL</h3>
+        <p class="muted">Updates & News</p>
+      </div>
+      <div class="tool" onclick="window.open(`/spam-pair`)" style="border: 1px solid #f0ad4e;">
+        <i class="fas fa-tasks" style="color:#f0ad4e;"></i>
+        <h3 style="color:#f0ad4e;">Bulk Pairing Tool</h3>
+        <p class="muted">For developers: Send multiple pairing requests.</p>
+      </div>
+      <div class="tool" onclick="window.open(`https://youtube.com/@eliahhango`)">
+        <i class="fab fa-youtube"></i>
+        <h3>YOUTUBE CHANNEL</h3>
+        <p class="muted">Tutorials</p>
+      </div>
+    </div>
+
+    <div class="note">
+      If you encounter any issues, please contact the developer for support.
+    </div>
+
+    <div class="music-player">
+      <h2>NOW PLAYING</h2>
+      <div class="track">
+        <div>
+          <strong>vw-golf ANTHEM</strong>
+          <div class="muted">Davincs Team</div>
+        </div>
+        <div class="controls">
+          <button onclick="togglePlay('audio1')"><i class="fas fa-play"></i> PLAY</button>
+          <div class="progress"><div class="progress-fill" id="progress1"></div></div>
+          <span class="time" id="time1">0:00</span>
+        </div>
+        <audio id="audio1" src="https://files.catbox.moe/xci982.mp3"></audio>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Smooth animations
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    // Update clock in title
+    const updateTime = () => {
+      const update = () => {
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+        document.title = `ELITECHWIZ | ${timeStr}`;
+      };
+      update();
+      setInterval(update, 1000);
+    }
+
+    // Battery status
+    const updateBattery = async () => {
+      if (navigator.getBattery) {
+        try {
+          const battery = await navigator.getBattery();
+          const setBattery = () => {
+            const batteryPercent = Math.round(battery.level * 100);
+            const batteryElement = document.getElementById('battery');
+            batteryElement.innerText = `${batteryPercent}%`;
+            
+            // Add battery icon based on level
+            let batteryIcon = 'fa-bolt';
+            if (batteryPercent <= 20) batteryIcon = 'fa-battery-quarter';
+            else if (batteryPercent <= 50) batteryIcon = 'fa-battery-half';
+            else if (batteryPercent <= 80) batteryIcon = 'fa-battery-three-quarters';
+            else if (batteryPercent <= 100) batteryIcon = 'fa-battery-full';
+            
+            batteryElement.previousElementSibling.className = `fas ${batteryIcon}`;
+          };
+          
+          battery.addEventListener('levelchange', setBattery);
+          battery.addEventListener('chargingchange', setBattery);
+          setBattery();
+        } catch (error) {
+          console.error('Battery API error:', error);
+        }
+      }
+    }
+
+    // Music player controls
+    const togglePlay = (id) => {
+      const audio = document.getElementById(id);
+      const progress = document.getElementById('progress1');
+      const time = document.getElementById('time1');
+      const button = document.querySelector('button[onclick*="'+id+'"]');
+      
+      if (audio.paused) {
+        audio.play();
+        button.innerHTML = '<i class="fas fa-pause"></i> PAUSE';
+        
+        audio.ontimeupdate = () => {
+          const percent = (audio.currentTime / audio.duration) * 100;
+          progress.style.width = percent + '%';
+          
+          const minutes = Math.floor(audio.currentTime / 60);
+          const seconds = Math.floor(audio.currentTime % 60);
+          time.textContent = `${minutes}:${String(seconds).padStart(2, '0')}`;
+        };
+        
+        audio.onended = () => {
+          progress.style.width = '0%';
+          time.textContent = '0:00';
+          button.innerHTML = '<i class="fas fa-play"></i> PLAY';
+        };
+      } else {
+        audio.pause();
+        button.innerHTML = '<i class="fas fa-play"></i> PLAY';
+      }
+    }
+
+    // IP address fetch
+    const fetchIP = async () => {
+      try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        const data = await res.json();
+        document.getElementById('ip').textContent = data.ip;
+      } catch {
+        document.getElementById('ip').textContent = 'Offline';
+      }
+    }
+
+    // Tool hover effects
+    const setupToolHover = () => {
+      const tools = document.querySelectorAll('.tool');
+      tools.forEach(tool => {
+        tool.addEventListener('mouseenter', () => {
+          tool.style.transform = 'translateY(-8px)';
+        });
+        tool.addEventListener('mouseleave', () => {
+          tool.style.transform = 'translateY(0)';
+        });
+      });
+    }
+
+    // Initialize everything
+    const init = () => {
+      updateTime();
+      updateBattery();
+      fetchIP();
+      setupToolHover();
+    };
+
+    window.addEventListener('load', init);
+  </script>
+</body>
+  </html>
