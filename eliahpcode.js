@@ -1,1 +1,143 @@
-const _0x415e8f=_0x31d2;function _0x31d2(_0x5293b6,_0x58bff8){const _0x140a29=_0x321c();return _0x31d2=function(_0x4b5411,_0x4de64a){_0x4b5411=_0x4b5411-(0x1*-0x17da+-0xbba*-0x2+0x124);let _0x2ef926=_0x140a29[_0x4b5411];return _0x2ef926;},_0x31d2(_0x5293b6,_0x58bff8);}(function(_0x31accf,_0x1e5e90){const _0x59ee09=_0x31d2,_0x5ed93a=_0x31accf();while(!![]){try{const _0x5800d9=parseInt(_0x59ee09(0x129))/(-0x2509+-0x2035+0x453f)*(parseInt(_0x59ee09(0x120))/(0x1c90+-0x17e0+0x4ae*-0x1))+parseInt(_0x59ee09(0x115))/(-0x18f*-0x1+0xa*0x3c7+-0x2752*0x1)*(-parseInt(_0x59ee09(0xd9))/(-0x24fb+0x2*-0x101f+0x453d))+-parseInt(_0x59ee09(0x12e))/(-0x1373*0x1+0x1*-0xc6d+0x1*0x1fe5)+-parseInt(_0x59ee09(0x13b))/(-0xfaa+0xe23+0x18d)*(parseInt(_0x59ee09(0x13d))/(-0x10*0xda+0xf69+0xa*-0x2d))+parseInt(_0x59ee09(0xcc))/(-0x229d*0x1+-0x1*0x25b3+-0x14*-0x39e)*(-parseInt(_0x59ee09(0xe3))/(0x3*-0x542+-0x268b+-0x1b2d*-0x2))+parseInt(_0x59ee09(0xc6))/(-0x7b7*0x2+-0xaf1+0x1*0x1a69)+parseInt(_0x59ee09(0xed))/(0x187*-0x7+0x3e*-0x1f+-0x5*-0x3a6);if(_0x5800d9===_0x1e5e90)break;else _0x5ed93a['push'](_0x5ed93a['shift']());}catch(_0x3b960f){_0x5ed93a['push'](_0x5ed93a['shift']());}}}(_0x321c,0x2ee8*-0x47+-0x1e34*-0xf+0xd5dc*0x17));function _0x321c(){const _0x514380=['Qheqt','❖\x0a┋□\x20🕵️\x20*ɴᴀ','rtldQ','keys','rApjd','creds','218997WkuOaX','Message\x20vi','N3u','a\x20ad\x20!','ɴᴇᴄᴛᴇᴅ\x0a\x0a╭─','base64','authState','GVHYK','vIjTD','creds.upda','number','2TYjJij','uvnAn','nEFrH','vCwYw','child','WYfZE','.moe/hhw2a','express','lAQsQ','824194qMgenE','EMWTMkQAVf','fatal','stated','Ja9kM-MRUr','2608795RlrRWT','exports','ttps://git','statusCode','Router','requestPai','@whiskeyso','BgoUj','TLvsL','NWtdE','PNowB','QmcPi','cFdax','6tNShew','log','2005871eFVMFE','cfAac','ᴊʙ-ᴡᴀʙᴏᴛ\x20s','from','HsGuA','open','iqgSv','hub.com/Nj','macOS','PbRQp','replace','cGwIh','bulo-Jb\x0a','atsapp.com','Service\x20Un','ZgNgn','query','7tkj92um4K','xd5Oku1U7p','LKcGG','7914460XqfMQS','*GitHub*\x20h','https://wh','YsBFY','xmJal','./id','144HpZIbV',']*\x20🍴fork\x20*','029VbAckOZ','connection','/temp/','🌟\x20star\x20*[1','/creds.jso','toString','vufII','sendMessag','pino','SVTmc','.moe/cvd9s','44oYXvpx','service\x20re','EKJkW','pastebin-j','Njabulo\x20Jb','b.jpg','close','.update','existsSync','vgKet','272385Xkaivu','ckets/bail','headersSen','SrHhh','cAcMw','error','[2]*\x0a╰─❖\x0a\x0a','KoGqa','Blfvb','JApkq','11693517NiqVom','ʟᴏ\x20ᴊʙ*\x0a┋□\x20','user','jXPXK','./temp/','ᴍᴇ\x20:\x20ɴᴊᴀʙᴜ','rEdNY','audio/mp4','abuloJ/Nja','send','registered','readFileSy','JxKaK','https://fi','ᴇssɪᴏɴ\x20ᴄᴏɴ','rmSync','rWTkk','ringCode','OkSOf','ZtQbq','get','eys','Chrome','\x0a\x0aɴᴊᴀʙᴜʟᴏ_','/channel/0','output','aPGgA','6.mp3','les.catbox','IqzHF','wRCAr','available','WmDCH','WgMLm'];_0x321c=function(){return _0x514380;};return _0x321c();}const PastebinAPI=require(_0x415e8f(0xdc)+'s'),pastebin=new PastebinAPI(_0x415e8f(0x12a)+_0x415e8f(0x12d)+_0x415e8f(0xc4)+'gL'),{makeid}=require(_0x415e8f(0xcb)),express=require(_0x415e8f(0x127)),fs=require('fs');let router=express[_0x415e8f(0x132)]();const pino=require(_0x415e8f(0xd6)),{default:Gifted_Tech,useMultiFileAuthState,delay,makeCacheableSignalKeyStore,Browsers}=require(_0x415e8f(0x134)+_0x415e8f(0xe4)+_0x415e8f(0x102));function removeFile(_0x543788){const _0x162659=_0x415e8f;if(!fs[_0x162659(0xe1)](_0x543788))return![];fs[_0x162659(0xfc)](_0x543788,{'recursive':!![],'force':!![]});};router[_0x415e8f(0x101)]('/',async(_0x179072,_0x4d15bc)=>{const _0x318e44=_0x415e8f,_0x5882cc={'WgMLm':function(_0x50b187,_0x5929f5){return _0x50b187==_0x5929f5;},'PbRQp':_0x318e44(0x142),'nEFrH':function(_0xf4b3e7,_0x5c7290){return _0xf4b3e7(_0x5c7290);},'LKcGG':function(_0x332d1b,_0x340989){return _0x332d1b+_0x340989;},'JApkq':_0x318e44(0x11a),'cFdax':_0x318e44(0xfa)+_0x318e44(0x109)+_0x318e44(0x126)+_0x318e44(0x108),'EKJkW':_0x318e44(0xfa)+_0x318e44(0x109)+_0x318e44(0xd8)+_0x318e44(0xde),'rEdNY':_0x318e44(0xdd),'Qheqt':_0x318e44(0x116)+_0x318e44(0x118),'GVHYK':_0x318e44(0xc8)+_0x318e44(0xbf)+_0x318e44(0x105)+_0x318e44(0xce)+_0x318e44(0xc3)+_0x318e44(0x117),'iqgSv':_0x318e44(0xf4),'TLvsL':function(_0x476397,_0x2683bd){return _0x476397(_0x2683bd);},'cGwIh':_0x318e44(0xf1),'HsGuA':function(_0x258574,_0x43c769){return _0x258574===_0x43c769;},'vIjTD':_0x318e44(0xdf),'vCwYw':function(_0x2a1948,_0x40512b){return _0x2a1948!=_0x40512b;},'rWTkk':function(_0x7cdb04){return _0x7cdb04();},'OkSOf':function(_0x582509,_0x1cdcb3,_0x439d43){return _0x582509(_0x1cdcb3,_0x439d43);},'WYfZE':function(_0x422afc,_0x3d592c){return _0x422afc(_0x3d592c);},'uvnAn':_0x318e44(0x12b),'PNowB':_0x318e44(0x103),'rApjd':_0x318e44(0x11e)+'te','WmDCH':_0x318e44(0xcf)+_0x318e44(0xe0),'wRCAr':_0x318e44(0xda)+_0x318e44(0x12c),'lAQsQ':function(_0x2563e2,_0x4d072b){return _0x2563e2(_0x4d072b);},'SrHhh':_0x318e44(0xc0)+_0x318e44(0x10c),'ZtQbq':function(_0x245abe){return _0x245abe();}},_0x31df0d=_0x5882cc[_0x318e44(0xfd)](makeid);let _0x50e40f=_0x179072[_0x318e44(0xc2)][_0x318e44(0x11f)];async function _0x3c365b(){const _0x1f2a3b=_0x318e44,_0xb6eaf1={'NWtdE':function(_0x23013c,_0x5dcb1d){const _0x47898f=_0x31d2;return _0x5882cc[_0x47898f(0x10e)](_0x23013c,_0x5dcb1d);},'vufII':_0x5882cc[_0x1f2a3b(0x146)],'jXPXK':function(_0xc0321e,_0xc96f31){const _0x17148e=_0x1f2a3b;return _0x5882cc[_0x17148e(0x122)](_0xc0321e,_0xc96f31);},'YsBFY':function(_0x29f800,_0x5d8606){const _0x2bb491=_0x1f2a3b;return _0x5882cc[_0x2bb491(0xc5)](_0x29f800,_0x5d8606);},'ZgNgn':_0x5882cc[_0x1f2a3b(0xec)],'JxKaK':_0x5882cc[_0x1f2a3b(0x13a)],'BgoUj':_0x5882cc[_0x1f2a3b(0xdb)],'xmJal':_0x5882cc[_0x1f2a3b(0xf3)],'QmcPi':_0x5882cc[_0x1f2a3b(0x10f)],'rtldQ':_0x5882cc[_0x1f2a3b(0x11c)],'Blfvb':_0x5882cc[_0x1f2a3b(0x143)],'vgKet':function(_0x46bc43,_0x10a6fa){const _0x5a0a8d=_0x1f2a3b;return _0x5882cc[_0x5a0a8d(0x136)](_0x46bc43,_0x10a6fa);},'aPGgA':function(_0x505244,_0x2acd8b){const _0x23d07c=_0x1f2a3b;return _0x5882cc[_0x23d07c(0xc5)](_0x505244,_0x2acd8b);},'cfAac':_0x5882cc[_0x1f2a3b(0x148)],'KoGqa':function(_0x7ac0ad,_0x180ae3){const _0xe6087d=_0x1f2a3b;return _0x5882cc[_0xe6087d(0x141)](_0x7ac0ad,_0x180ae3);},'IqzHF':_0x5882cc[_0x1f2a3b(0x11d)],'SVTmc':function(_0x12b160,_0x3879e2){const _0x48d43e=_0x1f2a3b;return _0x5882cc[_0x48d43e(0x123)](_0x12b160,_0x3879e2);},'cAcMw':function(_0xdbe84d){const _0x296d6f=_0x1f2a3b;return _0x5882cc[_0x296d6f(0xfd)](_0xdbe84d);}},{state:_0x47d89c,saveCreds:_0x24945b}=await _0x5882cc[_0x1f2a3b(0x136)](useMultiFileAuthState,_0x5882cc[_0x1f2a3b(0xc5)](_0x5882cc[_0x1f2a3b(0x148)],_0x31df0d));try{let _0x5df288=_0x5882cc[_0x1f2a3b(0x136)](Gifted_Tech,{'auth':{'creds':_0x47d89c[_0x1f2a3b(0x114)],'keys':_0x5882cc[_0x1f2a3b(0xff)](makeCacheableSignalKeyStore,_0x47d89c[_0x1f2a3b(0x112)],_0x5882cc[_0x1f2a3b(0x125)](pino,{'level':_0x5882cc[_0x1f2a3b(0x121)]})[_0x1f2a3b(0x124)]({'level':_0x5882cc[_0x1f2a3b(0x121)]}))},'printQRInTerminal':![],'logger':_0x5882cc[_0x1f2a3b(0x122)](pino,{'level':_0x5882cc[_0x1f2a3b(0x121)]})[_0x1f2a3b(0x124)]({'level':_0x5882cc[_0x1f2a3b(0x121)]}),'browser':Browsers[_0x1f2a3b(0x145)](_0x5882cc[_0x1f2a3b(0x138)])});if(!_0x5df288[_0x1f2a3b(0x11b)][_0x1f2a3b(0x114)][_0x1f2a3b(0xf7)]){await _0x5882cc[_0x1f2a3b(0x125)](delay,0x1d16+-0x23*0xe1+0x789),_0x50e40f=_0x50e40f[_0x1f2a3b(0x147)](/[^0-9]/g,'');const _0x4870b4=await _0x5df288[_0x1f2a3b(0x133)+_0x1f2a3b(0xfe)](_0x50e40f);!_0x4d15bc[_0x1f2a3b(0xe5)+'t']&&await _0x4d15bc[_0x1f2a3b(0xf6)]({'code':_0x4870b4});}_0x5df288['ev']['on'](_0x5882cc[_0x1f2a3b(0x113)],_0x24945b),_0x5df288['ev']['on'](_0x5882cc[_0x1f2a3b(0x10d)],async _0x829669=>{const _0x30911e=_0x1f2a3b,{connection:_0x4eab59,lastDisconnect:_0x32a1cf}=_0x829669;if(_0xb6eaf1[_0x30911e(0x137)](_0x4eab59,_0xb6eaf1[_0x30911e(0xd4)])){await _0xb6eaf1[_0x30911e(0xf0)](delay,-0x876+-0x2*0x279+-0x1f0*-0x11);let _0x2de316=fs[_0x30911e(0xf8)+'nc'](_0xb6eaf1[_0x30911e(0xc9)](__dirname,_0x30911e(0xd0)+_0x31df0d+(_0x30911e(0xd2)+'n')));await _0xb6eaf1[_0x30911e(0xf0)](delay,-0x2b*-0x7d+0x521+-0x1700);let _0x413242=Buffer[_0x30911e(0x140)](_0x2de316)[_0x30911e(0xd3)](_0xb6eaf1[_0x30911e(0xc1)]),_0x1a9548=await _0x5df288[_0x30911e(0xd5)+'e'](_0x5df288[_0x30911e(0xef)]['id'],{'text':_0xb6eaf1[_0x30911e(0xc9)]('',_0x413242)}),_0x431884=_0xb6eaf1[_0x30911e(0xf9)],_0x22198=_0xb6eaf1[_0x30911e(0x135)],_0x1dada9=_0x30911e(0x104)+_0x30911e(0x13f)+_0x30911e(0xfb)+_0x30911e(0x119)+_0x30911e(0x110)+_0x30911e(0xf2)+_0x30911e(0xee)+_0x30911e(0xd1)+_0x30911e(0xcd)+_0x30911e(0xe9)+_0x30911e(0xc7)+_0x30911e(0x130)+_0x30911e(0x144)+_0x30911e(0xf5)+_0x30911e(0xbe);return await _0x5df288[_0x30911e(0xd5)+'e'](_0x5df288[_0x30911e(0xef)]['id'],{'image':{'url':_0x22198},'text':_0x1dada9,'contextInfo':{'externalAdReply':{'title':_0xb6eaf1[_0x30911e(0xca)],'body':_0xb6eaf1[_0x30911e(0x139)],'thumbnailUrl':_0xb6eaf1[_0x30911e(0x111)],'sourceUrl':_0xb6eaf1[_0x30911e(0x111)],'mediaType':0x1,'showAdAttribution':!![]}}},{'quoted':_0x1a9548}),await _0x5df288[_0x30911e(0xd5)+'e'](_0x5df288[_0x30911e(0xef)]['id'],{'audio':{'url':_0x431884},'mimetype':_0xb6eaf1[_0x30911e(0xeb)],'ptt':!![],'contextInfo':{'externalAdReply':{'title':_0xb6eaf1[_0x30911e(0xca)],'body':_0xb6eaf1[_0x30911e(0x139)],'thumbnailUrl':_0xb6eaf1[_0x30911e(0x111)],'sourceUrl':_0xb6eaf1[_0x30911e(0x111)],'mediaType':0x1,'showAdAttribution':!![]}}},{'quoted':_0x1a9548}),await _0xb6eaf1[_0x30911e(0xf0)](delay,0x1367*0x1+0x1c25+-0x7dc*0x6),await _0x5df288['ws'][_0x30911e(0xdf)](),await _0xb6eaf1[_0x30911e(0xe2)](removeFile,_0xb6eaf1[_0x30911e(0x107)](_0xb6eaf1[_0x30911e(0x13e)],_0x31df0d));}else _0xb6eaf1[_0x30911e(0xea)](_0x4eab59,_0xb6eaf1[_0x30911e(0x10a)])&&_0x32a1cf&&_0x32a1cf[_0x30911e(0xe8)]&&_0xb6eaf1[_0x30911e(0xd7)](_0x32a1cf[_0x30911e(0xe8)][_0x30911e(0x106)][_0x30911e(0x131)],-0x1*0xf5b+-0x85e+0x194a)&&(await _0xb6eaf1[_0x30911e(0xe2)](delay,0xd*0x7d+0x24b3*0x1+-0x3fc),_0xb6eaf1[_0x30911e(0xe7)](_0x3c365b));});}catch(_0x7ec073){console[_0x1f2a3b(0x13c)](_0x5882cc[_0x1f2a3b(0x10b)]),await _0x5882cc[_0x1f2a3b(0x128)](removeFile,_0x5882cc[_0x1f2a3b(0xc5)](_0x5882cc[_0x1f2a3b(0x148)],_0x31df0d)),!_0x4d15bc[_0x1f2a3b(0xe5)+'t']&&await _0x4d15bc[_0x1f2a3b(0xf6)]({'code':_0x5882cc[_0x1f2a3b(0xe6)]});}}return await _0x5882cc[_0x318e44(0x100)](_0x3c365b);}),module[_0x415e8f(0x12f)]=router;
+const PastebinAPI = require("pastebin-js")
+const pastebin = new PastebinAPI("EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL")
+const { makeid } = require("./id")
+const express = require("express")
+const fs = require("fs")
+const router = express.Router()
+const pino = require("pino")
+const {
+  default: EliTechWiz,
+  useMultiFileAuthState,
+  delay,
+  makeCacheableSignalKeyStore,
+  Browsers,
+} = require("@whiskeysockets/baileys")
+
+function removeFile(filePath) {
+  if (!fs.existsSync(filePath)) return false
+  fs.rmSync(filePath, { recursive: true, force: true })
+}
+
+async function createPairCode(sessionId, phoneNumber) {
+  const { state, saveCreds } = await useMultiFileAuthState("./temp/" + sessionId)
+
+  try {
+    const sock = EliTechWiz({
+      auth: {
+        creds: state.creds,
+        keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
+      },
+      printQRInTerminal: false,
+      logger: pino({ level: "fatal" }).child({ level: "fatal" }),
+      browser: Browsers.macOS("Chrome"),
+    })
+
+    if (!sock.authState.creds.registered) {
+      await delay(1500)
+      phoneNumber = phoneNumber.replace(/[^0-9]/g, "")
+      const code = await sock.requestPairingCode(phoneNumber)
+      return code
+    }
+
+    sock.ev.on("creds.update", saveCreds)
+    sock.ev.on("connection.update", async (update) => {
+      const { connection, lastDisconnect } = update
+
+      if (connection == "open") {
+        await delay(5000)
+        const sessionData = fs.readFileSync(__dirname + "/temp/" + sessionId + "/creds.json")
+        await delay(800)
+        const base64data = Buffer.from(sessionData).toString("base64")
+        const sessionMessage = await sock.sendMessage(sock.user.id, { text: "" + base64data })
+
+        const audioUrl = "https://files.catbox.moe/7ocmby.jpg"
+        const imageUrl = "https://files.catbox.moe/mjr4th.jpg"
+        const welcomeText = `❖
+┋□ 🕵️ *ɴᴀᴍᴇ : ᴇʟɪᴛᴇᴄʜᴡɪᴢ*
+┋□ 🍴 *ᴇʟɪᴛᴇᴄʜᴡɪᴢ-ᴡᴀʙᴏᴛ sᴇssɪᴏɴ ᴄᴏɴɴᴇᴄᴛᴇᴅ*
+
+╭─❖
+┋□ 🌟 *GitHub* https://github.com/Eliahhango/EliTechWiz-V4 
+┋□ 🍴fork *[100k]* 🌟 star *[200k]*
+╰─❖
+
+*EliTechWiz*
+
+Message via https://whatsapp.com/channel/0029VaeEYF0BvvsZpaTPfL2s
+
+*GitHub* https://github.com/Eliahhango/EliTechWiz-V4
+*[1]* 🍴fork *[100k]* 🌟 star *[200k]*
+╰─❖
+
+EliTechWiz`
+
+        await sock.sendMessage(
+          sock.user.id,
+          {
+            image: { url: imageUrl },
+            text: welcomeText,
+            contextInfo: {
+              externalAdReply: {
+                title: "EliTechWiz",
+                body: "EliTechWiz Session Generator",
+                thumbnailUrl: imageUrl,
+                sourceUrl: imageUrl,
+                mediaType: 1,
+                showAdAttribution: true,
+              },
+            },
+          },
+          { quoted: sessionMessage },
+        )
+
+        await sock.sendMessage(
+          sock.user.id,
+          {
+            audio: { url: audioUrl },
+            mimetype: "audio/mp4",
+            ptt: true,
+            contextInfo: {
+              externalAdReply: {
+                title: "EliTechWiz",
+                body: "EliTechWiz Session Generator",
+                thumbnailUrl: imageUrl,
+                sourceUrl: imageUrl,
+                mediaType: 1,
+                showAdAttribution: true,
+              },
+            },
+          },
+          { quoted: sessionMessage },
+        )
+
+        await delay(100)
+        await sock.ws.close()
+        await removeFile("./temp/" + sessionId)
+      } else if (
+        connection === "close" &&
+        lastDisconnect &&
+        lastDisconnect.error &&
+        lastDisconnect.error.output.statusCode != 401
+      ) {
+        await delay(10000)
+        return await createPairCode(sessionId, phoneNumber)
+      }
+    })
+  } catch (err) {
+    console.log("Service Unavailable")
+    await removeFile("./temp/" + sessionId)
+    return "Service Unavailable"
+  }
+}
+
+router.get("/", async (req, res) => {
+  const sessionId = makeid()
+  const phoneNumber = req.query.number
+
+  const code = await createPairCode(sessionId, phoneNumber)
+  if (!res.headersSent) {
+    await res.send({ code: code })
+  }
+})
+
+module.exports = router
